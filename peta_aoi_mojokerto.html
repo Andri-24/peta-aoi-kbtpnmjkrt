@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_fd20d27721b514bf59d09fc705fc8962 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_fd20d27721b514bf59d09fc705fc8962" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_fd20d27721b514bf59d09fc705fc8962 = L.map(
+                "map_fd20d27721b514bf59d09fc705fc8962",
+                {
+                    center: [-7.55, 112.45],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 11,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_fec2d09fa880a7b64d118894e58b64b5 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_fec2d09fa880a7b64d118894e58b64b5.addTo(map_fd20d27721b514bf59d09fc705fc8962);
+        
+    
+        function geo_json_32e1c51fd7588418ff49ed543eed13f4_styler(feature) {
+            switch(feature.properties.nama) {
+                default:
+                    return {"color": "#e65100", "fillColor": "#ff7800", "fillOpacity": 0.35, "weight": 2.5};
+            }
+        }
+
+        function geo_json_32e1c51fd7588418ff49ed543eed13f4_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_32e1c51fd7588418ff49ed543eed13f4 = L.geoJson(null, {
+                onEachFeature: geo_json_32e1c51fd7588418ff49ed543eed13f4_onEachFeature,
+            
+                style: geo_json_32e1c51fd7588418ff49ed543eed13f4_styler,
+            ...{
+}
+        });
+
+        function geo_json_32e1c51fd7588418ff49ed543eed13f4_add (data) {
+            geo_json_32e1c51fd7588418ff49ed543eed13f4
+                .addData(data);
+        }
+            geo_json_32e1c51fd7588418ff49ed543eed13f4_add({"features": [{"geometry": {"coordinates": [[[112.445, -7.362], [112.512, -7.375], [112.57, -7.42], [112.605, -7.51], [112.62, -7.62], [112.595, -7.725], [112.535, -7.785], [112.47, -7.76], [112.395, -7.68], [112.33, -7.595], [112.31, -7.49], [112.345, -7.415], [112.4, -7.38], [112.445, -7.362]]], "type": "Polygon"}, "properties": {"nama": "Kabupaten Mojokerto", "provinsi": "Jawa Timur"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_32e1c51fd7588418ff49ed543eed13f4.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature => {
+        if (feature === null) {
+            return '';
+        } else if (typeof(feature)=='object') {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
+    }
+    let fields = ["nama", "provinsi"];
+    let aliases = ["Wilayah:", "Provinsi:"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_32e1c51fd7588418ff49ed543eed13f4.addTo(map_fd20d27721b514bf59d09fc705fc8962);
+        
+    
+            var tile_layer_8439e75d1cab6e2945d90b5b57bb341c = L.tileLayer(
+                "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                {
+  "minZoom": 0,
+  "maxZoom": 18,
+  "maxNativeZoom": 18,
+  "noWrap": false,
+  "attribution": "Esri",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_8439e75d1cab6e2945d90b5b57bb341c.addTo(map_fd20d27721b514bf59d09fc705fc8962);
+        
+    
+            var layer_control_100ac50ff6fde6bd7fbe3a9e8ce5b80d_layers = {
+                base_layers : {
+                    "cartodbpositron" : tile_layer_fec2d09fa880a7b64d118894e58b64b5,
+                    "Esri Satellite" : tile_layer_8439e75d1cab6e2945d90b5b57bb341c,
+                },
+                overlays :  {
+                    "Batas AOI" : geo_json_32e1c51fd7588418ff49ed543eed13f4,
+                },
+            };
+            let layer_control_100ac50ff6fde6bd7fbe3a9e8ce5b80d = L.control.layers(
+                layer_control_100ac50ff6fde6bd7fbe3a9e8ce5b80d_layers.base_layers,
+                layer_control_100ac50ff6fde6bd7fbe3a9e8ce5b80d_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": true,
+  "autoZIndex": true,
+}
+            ).addTo(map_fd20d27721b514bf59d09fc705fc8962);
+
+        
+</script>
+</html>
